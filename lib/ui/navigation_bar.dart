@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tegalur_flutter/routes.dart';
 
 class NavigationBar extends StatelessWidget implements PreferredSizeWidget {
 
@@ -22,13 +23,23 @@ class NavigationBar extends StatelessWidget implements PreferredSizeWidget {
         ],
       ),
       actions: [
-        Container(
-          padding: EdgeInsets.all(20),
-          child: Text('Home'),
+        GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, rDashboard);
+          },
+          child: Container(
+            padding: EdgeInsets.all(20),
+            child: Text('Home'),
+          ),
         ),
-        Container(
-          padding: EdgeInsets.all(20),
-          child: Text('About'),
+        GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, rAbout);
+          },
+          child: Container(
+            padding: EdgeInsets.all(20),
+            child: Text('About'),
+          ),
         ),
         Container(
           padding: EdgeInsets.all(20),

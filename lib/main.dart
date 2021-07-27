@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tegalur_flutter/bloc/get_berita/get_berita_cubit.dart';
+import 'package:tegalur_flutter/routes.dart';
 import 'package:tegalur_flutter/ui/dashboard/dashboard.dart';
 import 'package:tegalur_flutter/ui/listcontent/berita/berita_list.dart';
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: BeritaList(),
+        initialRoute: rDashboard,
+        onGenerateRoute: generateRoute,
       ),
     );
   }
