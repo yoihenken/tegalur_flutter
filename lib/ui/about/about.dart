@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tegalur_flutter/ui/footer.dart';
 import 'package:tegalur_flutter/ui/jumbotron.dart';
@@ -22,7 +23,7 @@ class About extends StatelessWidget {
               children: [
                 Container(
                   color: Color(0xfff4623a),
-                  padding: EdgeInsets.fromLTRB(30,80, 30, 80),
+                  padding: EdgeInsets.fromLTRB(30, 80, 30, 80),
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -118,9 +119,12 @@ class About extends StatelessWidget {
                 )
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            GridView.extent(
+              shrinkWrap: true,
+              padding: EdgeInsets.all(100),
+              maxCrossAxisExtent: 250,
+              crossAxisSpacing: 100,
+              mainAxisSpacing: 50,
               children: [
                 Column(
                   children: [
@@ -128,7 +132,7 @@ class About extends StatelessWidget {
                       width: 150,
                       height: 150,
                       padding: EdgeInsets.all(20),
-                      margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
@@ -138,7 +142,7 @@ class About extends StatelessWidget {
                     Text(
                       'Ajeng Fitria Rahmawati',
                       style:
-                      TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
@@ -148,7 +152,7 @@ class About extends StatelessWidget {
                       width: 150,
                       height: 150,
                       padding: EdgeInsets.all(20),
-                      margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
@@ -168,7 +172,7 @@ class About extends StatelessWidget {
                       width: 150,
                       height: 150,
                       padding: EdgeInsets.all(20),
-                      margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
@@ -185,10 +189,10 @@ class About extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                    width: 150,
-                    height: 150,
+                      width: 150,
+                      height: 150,
                       padding: EdgeInsets.all(20),
-                      margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
@@ -201,8 +205,7 @@ class About extends StatelessWidget {
                           TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     )
                   ],
-                ),
-
+                )
               ],
             ),
             Footer(),
