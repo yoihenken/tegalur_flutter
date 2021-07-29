@@ -80,29 +80,51 @@ class _WisataListState extends State<WisataList> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(30, 50, 30, 50),
                           child: GridView.builder(
+                            shrinkWrap: true,
                               itemCount: _data.length,
-                              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2, childAspectRatio: 0.7, mainAxisSpacing: 15, crossAxisSpacing: 15
-                              ),
+                              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                                  maxCrossAxisExtent: 400.0,
+                                  crossAxisSpacing: 20.0,
+                                  mainAxisSpacing: 20.0),
                               itemBuilder: (context, i){
                                 final _item = _data[i];
                                 return GestureDetector(
-                                  onTap:  (){
-
-                                  },
-                                  child: Stack(
-                                    children: [
-                                      Container(
-                                        width: 180,
-                                        height: MediaQuery.of(context).size.height,
-                                        decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                image: NetworkImage(_item.image),
-                                                fit: BoxFit.cover
-                                            )
-                                        ),
-                                      )
-                                    ],
+                                  onTap:  (){},
+                                  child: Padding(
+                                    padding: EdgeInsets.all(10),
+                                    child: Container(
+                                      padding: EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(20),
+                                          color: Colors.white,
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Color(0xfff4623a),
+                                                spreadRadius: 3)
+                                          ]),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(_item.image)
+                                                )
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.symmetric(vertical: 10),
+                                            child: Text(_item.title,
+                                                maxLines: 2,
+                                                overflow: TextOverflow.ellipsis,
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Color(0xfff4623a),
+                                                    fontWeight: FontWeight.bold)),
+                                          )
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 );
                               }
