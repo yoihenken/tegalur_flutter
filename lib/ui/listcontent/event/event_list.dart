@@ -1,6 +1,3 @@
-import 'dart:html';
-import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tegalur_flutter/bloc/get_event/get_event_cubit.dart';
@@ -91,13 +88,6 @@ class _EventListState extends State<EventList> {
                           mainAxisSpacing: 20.0),
                       itemBuilder: (context, i) {
                         final _item = _data[i];
-                        String imageUrl = _item.url;
-                        // https://github.com/flutter/flutter/issues/41563
-                        // ignore: undefined_prefixed_name
-                        ui.platformViewRegistry.registerViewFactory(
-                          imageUrl,
-                          (int _) => ImageElement()..src = imageUrl,
-                        );
                         return GestureDetector(
                           onTap: () {},
                           child: Padding(
