@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tegalur_flutter/bloc/get_berita/get_berita_cubit.dart';
+import 'package:tegalur_flutter/bloc/get_event/get_event_cubit.dart';
+import 'package:tegalur_flutter/bloc/get_wisata/get_wisata_cubit.dart';
 import 'package:tegalur_flutter/routes.dart';
-import 'package:tegalur_flutter/ui/dashboard/dashboard.dart';
-import 'package:tegalur_flutter/ui/listcontent/berita/berita_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,9 +16,11 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => GetBeritaCubit()),
+        BlocProvider(create: (_) => GetWisataCubit()),
+        BlocProvider(create: (_) => GetEventCubit()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Tegalur',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

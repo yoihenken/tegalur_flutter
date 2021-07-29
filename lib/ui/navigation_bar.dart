@@ -41,9 +41,14 @@ class NavigationBar extends StatelessWidget implements PreferredSizeWidget {
             child: Text('About'),
           ),
         ),
-        Container(
-          padding: EdgeInsets.all(20),
-          child: Text('Login'),
+        GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, rFeedbackForm);
+          },
+          child: Container(
+            padding: EdgeInsets.all(20),
+            child: Text('Feedback'),
+          ),
         ),
       ],
     );

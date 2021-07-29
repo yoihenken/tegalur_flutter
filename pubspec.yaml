@@ -33,6 +33,8 @@ dependencies:
   flutter_bloc: ^7.0.1
   dio: ^4.0.0
   equatable: ^2.0.3
+  firebase_core: ^1.4.0
+  cloud_firestore: ^2.4.0
 
 dev_dependencies:
   flutter_test:
@@ -49,18 +51,18 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-  - asset/img/ajeng.jpg
-  - asset/img/bagus.jpg
-  - asset/img/gamaliel.jpg
-  - asset/img/vicky.jpg
-  - asset/img/Logo.png
-  - asset/img/home-bg.jpg
-  - asset/img/berita.jpg
-  - asset/img/event.jpg
-  - asset/img/kuliner.jpg
-  - asset/img/oleh.jpg
-  - asset/img/penginapan.jpg
-  - asset/img/wisata.jpg
+    - asset/img/ajeng.jpg
+    - asset/img/bagus.jpg
+    - asset/img/gamaliel.jpg
+    - asset/img/vicky.jpg
+    - asset/img/Logo.png
+    - asset/img/home-bg.jpg
+    - asset/img/berita.jpg
+    - asset/img/event.jpg
+    - asset/img/kuliner.jpg
+    - asset/img/oleh.jpg
+    - asset/img/penginapan.jpg
+    - asset/img/wisata.jpg
 
 
 

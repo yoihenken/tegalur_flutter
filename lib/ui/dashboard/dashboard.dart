@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tegalur_flutter/routes.dart';
 import 'package:tegalur_flutter/ui/footer.dart';
 import 'package:tegalur_flutter/ui/jumbotron.dart';
 import 'package:tegalur_flutter/ui/navigation_bar.dart';
@@ -65,70 +66,85 @@ class Dashboard extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 3,
-                      height: MediaQuery.of(context).size.height / 3,
-                      alignment: Alignment.center,
-                      child: Text(
-                        'BERITA',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, rBeritaList);
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        height: MediaQuery.of(context).size.height / 3,
+                        alignment: Alignment.center,
+                        child: Text(
+                          'BERITA',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.5),
+                                    BlendMode.darken),
+                                image: AssetImage('asset/img/berita.jpg'))),
                       ),
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              colorFilter: ColorFilter.mode(
-                                  Colors.black.withOpacity(0.5),
-                                  BlendMode.darken),
-                              image: AssetImage('asset/img/berita.jpg'))),
                     )
                   ],
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 3,
-                      height: MediaQuery.of(context).size.height / 3,
-                      alignment: Alignment.center,
-                      child: Text(
-                        'PARIWISATA',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, rWisataList);
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        height: MediaQuery.of(context).size.height / 3,
+                        alignment: Alignment.center,
+                        child: Text(
+                          'PARIWISATA',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.5),
+                                    BlendMode.darken),
+                                image: AssetImage('asset/img/wisata.jpg'))),
                       ),
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              colorFilter: ColorFilter.mode(
-                                  Colors.black.withOpacity(0.5),
-                                  BlendMode.darken),
-                              image: AssetImage('asset/img/wisata.jpg'))),
                     )
                   ],
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 3,
-                      height: MediaQuery.of(context).size.height / 3,
-                      alignment: Alignment.center,
-                      child: Text(
-                        'EVENT',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, rEventList);
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        height: MediaQuery.of(context).size.height / 3,
+                        alignment: Alignment.center,
+                        child: Text(
+                          'EVENT',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.5),
+                                    BlendMode.darken),
+                                image: AssetImage('asset/img/event.jpg'))),
                       ),
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              colorFilter: ColorFilter.mode(
-                                  Colors.black.withOpacity(0.5),
-                                  BlendMode.darken),
-                              image: AssetImage('asset/img/event.jpg'))),
                     )
                   ],
                 ),
